@@ -1,4 +1,4 @@
-# DynamicForm
+# Dynamic Form Demo
 
 Create a dynamic form with configurable fields
 
