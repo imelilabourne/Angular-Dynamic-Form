@@ -15,10 +15,15 @@ export class DynamicFormComponentComponent implements OnInit {
 
   form: FormGroup;
 
+  payload: string = '';
   constructor(private controlService: QuestionControlService) { }
 
   ngOnInit() {
     this.form = this.controlService.toFormGroup(this.questions);
   }
 
+  // to get form's value
+  onSubmit(){
+    this.payload = this.form.value;
+  }
 }

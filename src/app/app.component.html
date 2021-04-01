@@ -1,1 +1,24 @@
-<dynamic-form-component  [questions]=" questions$ | async"></dynamic-form-component>
+<div class="container">
+    <div><img src="../assets/oc dev.PNG" alt="logo"></div>
+
+    <h4 class="center">College Application Form</h4>
+
+    <div>
+        <!-- personal info -->
+        <dynamic-form-component #template [questions]=" questions$ | async">
+            <p class="title">Personal Information</p>
+        </dynamic-form-component>
+        
+        <!-- education -->
+        <dynamic-form-component  [questions]=" questions2$ | async">
+            <p class="title">Education</p>
+        </dynamic-form-component>
+    </div>
+
+
+    <div class="container">
+        <button (click)="onSubmit()">Submit</button>
+    </div>
+</div>
+
+

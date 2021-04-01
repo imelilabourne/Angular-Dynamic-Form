@@ -1,4 +1,7 @@
-<form [formGroup] = "form">
+<!-- for form group's title -->
+<ng-content></ng-content>
+
+<form (ngSubmit)="onSubmit()" [formGroup] = "form" class="flex form">
   <div *ngFor="let question of questions">
       <dynamic-form-question-component [question] = "question" [form]  ="form"></dynamic-form-question-component>
   </div>
